@@ -1,7 +1,8 @@
-# Server: Ubuntu_NGINX_Gunicorn_djangoapp
+# Server AWS EC2 Ubuntu: NGINX_Gunicorn_djangoapp
 
 ## djangoapp
 ![](images/venv.JPG "venv")
+![](images/ubuntu.JPG "ubuntu")
 * sudo apt-get update 
 * sudo apt-get install -y git python3-dev python3-venv python3-pip supervisor nginx vim libpq-dev
 * --> cd djangoapp
@@ -91,6 +92,9 @@ stdout_logfile=/var/log/game_muster.out.log
 * sudo supervisorctl update
 * sudo supervisorctl restart djangoapp
 * sudo supervisorctl stop djangoapp
+
+
+
 
 
 
