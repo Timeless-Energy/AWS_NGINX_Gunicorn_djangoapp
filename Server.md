@@ -2,8 +2,8 @@
 ## AWS_NGINX_Gunicorn_djangoapp
 ![](images/Architektur-NGINX-Gunicorn-Django.jpg "Architecture: Nginx Gunicorn Django")
 
-
 ## djangoapp
+![](images/venv.JPG.jpg "venv")
 * sudo apt-get update 
 * sudo apt-get install -y git python3-dev python3-venv python3-pip supervisor nginx vim libpq-dev
 * --> cd djangoapp
@@ -18,6 +18,7 @@ ubuntu@ip-172-31-11-203:~/djangoapp$ source venv/bin/activate
 * (venv) pip3 install -r requirements.txt 
 
 ## nginx
+![](images/NGINX_default.JPG "NGINX_default")
 * sudo apt-get install nginx
 * sudo vim /etc/nginx/sites-enabled/default
 
@@ -46,6 +47,7 @@ server {
 ```
 
 ## Setup Supervisor
+![](Supervisor_config.JPG "Supervisor_config")
 * cd /etc/supervisor/conf.d/
 * sudo vim djangoapp.conf
 
@@ -59,7 +61,6 @@ stderr_logfile=/var/log/game_muster.err.log
 stdout_logfile=/var/log/game_muster.out.log
 ```
 
-
 ## Update supervisor with the new process
 * sudo supervisorctl reread
 * sudo supervisorctl update
@@ -67,23 +68,7 @@ stdout_logfile=/var/log/game_muster.out.log
 * sudo supervisorctl stop djangoapp
 
 
-## MySQL
-* CREATE USER 'vitali-admin'@'%' IDENTIFIED WITH mysql_native_password BY 'LK17vblk#7';
-* GRANT ALL ON blog_data.* TO 'vitali-admin'@'%';
 
-
-## uninstall mysql-service
-* sudo apt remove --purge mysql-server
-* sudo apt purge mysql-server
-* sudo apt autoremove
-* sudo apt autoclean
-* sudo apt remove dbconfig-mysql
-
-* sudo systemctl stop mysql
-* sudo apt purge mysql-server mysql-client mysql-common mysql-server-core-* mysql-client-core-*
-* sudo rm -rf /etc/mysql /var/lib/mysql /var/log/mysql
-* sudo apt autoremove
-* sudo apt autoclean
 
 
 
