@@ -1,6 +1,5 @@
 # Server Ubuntu 
 ## AWS_NGINX_Gunicorn_djangoapp
-![](images/Architektur-NGINX-Gunicorn-Django.jpg "Architecture: Nginx Gunicorn Django")
 
 ## djangoapp
 ![](images/venv.JPG.jpg "venv")
