@@ -1,6 +1,7 @@
 # Server: Ubuntu_NGINX_Gunicorn_djangoapp
 
 ## djangoapp
+![](images/venv.JPG "venv")
 * sudo apt-get update 
 * sudo apt-get install -y git python3-dev python3-venv python3-pip supervisor nginx vim libpq-dev
 * --> cd djangoapp
@@ -11,8 +12,35 @@ compressormodel  database  djangoapp  manage.py  media  requirements.txt  static
 ubuntu@ip-172-31-11-203:~/djangoapp$ source venv/bin/activate
 (venv) ubuntu@ip-172-31-11-203:~/djangoapp$
 -->
+![](images/Gunicorn.JPG "Gunicorn")
 * source venv/bin/activate
 * (venv) pip3 install -r requirements.txt 
+```
+asgiref==3.3.1
+CoolProp==6.4.1
+cycler==0.10.0
+Django==3.1.7
+django-debug-toolbar==3.2
+FMPy==0.2.25
+kiwisolver==1.3.1
+lark-parser==0.11.2
+lxml==4.6.2
+matplotlib==3.3.3
+numpy==1.19.2
+Pillow==8.1.1
+pyparsing==2.4.7
+python-dateutil==2.8.1
+pytz==2021.1
+six==1.15.0
+sqlparse==0.4.1
+whitenoise==5.2.0
+scipy
+xlrd
+pandas
+django-cleanup
+django-bootstrap4
+gunicorn
+```
 
 ## nginx
 ![](images/NGINX_default.JPG "NGINX_default")
@@ -44,7 +72,7 @@ server {
 ```
 
 ## Setup Supervisor
-![](Supervisor_config.JPG "Supervisor_config")
+![](images/Supervisor_config.JPG "Supervisor_config")
 * cd /etc/supervisor/conf.d/
 * sudo vim djangoapp.conf
 
@@ -63,6 +91,7 @@ stdout_logfile=/var/log/game_muster.out.log
 * sudo supervisorctl update
 * sudo supervisorctl restart djangoapp
 * sudo supervisorctl stop djangoapp
+
 
 
 
