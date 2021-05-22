@@ -1,5 +1,5 @@
 # Server: Ubuntu_NGINX_Gunicorn_djangoapp
-<br>
+
 ## djangoapp
 ![](images/venv.JPG.jpg "venv")
 * sudo apt-get update 
