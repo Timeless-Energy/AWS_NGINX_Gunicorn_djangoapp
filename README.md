@@ -15,8 +15,12 @@ ubuntu@ip-172-31-11-203:~/djangoapp$ source venv/bin/activate
 -->
 ![](images/Gunicorn.JPG "Gunicorn")
 * source venv/bin/activate
-*  pip3 install gunicorn
-* (venv) pip3 install -r requirements.txt 
+* (venv)
+* --> install Guincorn
+* pip3 install gunicorn
+* --> install MySQL
+* sudo apt install python3-dev default-libmysqlclient-dev build-essential libssl-dev
+* pip3 install -r requirements.txt 
 ```
 asgiref==3.3.1
 CoolProp==6.4.1
