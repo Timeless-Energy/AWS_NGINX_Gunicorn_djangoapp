@@ -3,7 +3,7 @@
 ## djangoapp
 ![](images/venv.JPG "venv")
 ![](images/ubuntu.JPG "ubuntu")
-* sudo apt-get update 
+* sudo apt update; sudo apt upgrade -y
 * sudo apt-get install -y git python3-dev python3-venv python3-pip supervisor nginx vim libpq-dev
 * --> cd djangoapp
 * pathon3 -m venv venv
